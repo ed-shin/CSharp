@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace StockTrack.Util
+namespace Utility.UI
 {
     public class CustomDetailsListView : ListView
     {
