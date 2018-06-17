@@ -80,6 +80,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Threading\AsyncThread.cs" />
     <Compile Include="UI\ChartController.cs" />
+    <Compile Include="UI\CustomDetailsListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="UI\CustomProgressbar.cs">
       <SubType>UserControl</SubType>
     </Compile>
