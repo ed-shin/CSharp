@@ -14,13 +14,6 @@ namespace Utility.UI
         public CustomDetailsListView()
         {
             this.Columns.Add("");
-            this.Items.Add("sample");
-
-            for (int i = 0; i < 100; i++)
-            {
-                this.Items.Add("sample");
-
-            }
 
             this.Dock = DockStyle.Fill;
             this.BorderStyle = BorderStyle.None;
