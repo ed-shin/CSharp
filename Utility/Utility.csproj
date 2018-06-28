@@ -98,6 +98,7 @@
     <Compile Include="Window\Ini.cs" />
     <Compile Include="Window\PptUtil.cs" />
     <Compile Include="Window\ProcessSupporter.cs" />
+    <Compile Include="Window\WinAPI.cs" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="Microsoft.Office.Core">
