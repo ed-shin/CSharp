@@ -1,10 +1,12 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.Linq.Mapping;
 
 namespace Utiltiy.Database
 {
+    /// <summary>
+    /// Support To Get Table's Information have Annotation Attribute 
+    /// </summary>
     public static class TableUtil
     {
         public static string GetTableName<T>(this T table) where T : class

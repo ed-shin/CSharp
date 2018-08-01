@@ -105,6 +105,7 @@ namespace Utility.Comm
         public int capacity() { return m_iMax; }
 
         public bool IsValid() { return m_iPos < m_iMax ? true : false; }
+
         /// <summary>
         /// 커서를 지정된 만큼 이동시킴
         /// </summary>
@@ -179,7 +180,6 @@ namespace Utility.Comm
         /// <summary>
         /// short 데이터 추가, 커서는 short 길이 만큼 전진(2바이트)
         /// </summary>
-        /// <param name="s">값</param>
         public void putShort(short s)
         {
             if ((m_iPos + 2) > m_iMax)
@@ -190,18 +190,14 @@ namespace Utility.Comm
             buf = BitConverter.GetBytes(s);
             convert(ref buf);
 
-
             m_Buf[m_iPos++] = buf[0];
-
             m_Buf[m_iPos++] = buf[1];
-
         }
 
 
         /// <summary>
         /// unsigned short 데이터 추가, 커서는 unsigned short 길이 만큼 전진(2바이트)
         /// </summary>
-        /// <param name="s"></param>
         public void putUShort(ushort s)
         {
             if ((m_iPos + 2) > m_iMax)
@@ -220,7 +216,6 @@ namespace Utility.Comm
         /// <summary>
         /// int 값 추가 : 커서는 int 길이만큼 전진(4바이트)
         /// </summary>
-        /// <param name="s">값</param>
         public void putInt(int s)
         {
             if ((m_iPos + 4) > m_iMax)
@@ -240,7 +235,6 @@ namespace Utility.Comm
         /// <summary>
         /// unsigned int 값 추가, 커서는 unsigned int 길이만큼전진(4바이트)
         /// </summary>
-        /// <param name="s">값</param>
         public void putUInt(uint s)
         {
             if ((m_iPos + 4) > m_iMax)
@@ -260,7 +254,6 @@ namespace Utility.Comm
         /// <summary>
         /// long 값 추가 : 커서는 long길이 만큼전진(8바이트)
         /// </summary>
-        /// <param name="s">값</param>
         public void putLong(long s)
         {
             if ((m_iPos + 8) > m_iMax)
@@ -283,7 +276,6 @@ namespace Utility.Comm
         /// <summary>
         /// long 값 추가 : 커서는 long길이 만큼전진(8바이트)
         /// </summary>
-        /// <param name="s">값</param>
         public void putLongWithKey(long s, byte btKey)
         {
             if ((m_iPos + 8) > m_iMax)
@@ -306,7 +298,6 @@ namespace Utility.Comm
         /// <summary>
         /// float 값 추가 : 커서는 float길이 만큼 전진(4바이트)
         /// </summary>
-        /// <param name="s">값</param>
         public void putFloat(float s)
         {
             if ((m_iPos + 4) > m_iMax)
@@ -327,7 +318,6 @@ namespace Utility.Comm
         /// <summary>
         /// double값 추가 : 커서는 double 길이 만큼 전진(8바이트)
         /// </summary>
-        /// <param name="s"></param>
         public void putDouble(double s)
         {
             if ((m_iPos + 8) > m_iMax)
@@ -558,7 +548,6 @@ namespace Utility.Comm
                 return n;
 
             m_iPos = s;
-
             if ((m_iPos + 8) > m_iMax)
                 return n;
 
@@ -568,7 +557,6 @@ namespace Utility.Comm
             m_iPos += 8;
 
             return n;
-
         }
 
         /// <summary>

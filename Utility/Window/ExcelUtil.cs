@@ -9,7 +9,8 @@ using Microsoft.Office.Core;
 namespace Utiltiy.Window
 {
     /// <summary>
-    /// 참조. Excel Object Library
+    /// MS Excel Utility
+    /// (referece. com object library)
     /// </summary>
     public class ExcelUtil : IDisposable
     {

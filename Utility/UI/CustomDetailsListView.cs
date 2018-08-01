@@ -7,6 +7,9 @@ using System.Windows.Forms;
 
 namespace Utility.UI
 {
+    /// <summary>
+    /// Custom List View Example
+    /// </summary>
     public class CustomDetailsListView : ListView
     {
         private ListViewItem beforeFocusedItem = null;
@@ -28,6 +31,11 @@ namespace Utility.UI
             this.MouseMove += CustomDetailsListView_MouseMove;
         }
 
+        /// <summary>
+        /// Change item's color on mouse hover
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CustomDetailsListView_MouseMove(object sender, MouseEventArgs e)
         {
             //var p = this.PointToClient(MousePosition);

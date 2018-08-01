@@ -26,7 +26,6 @@ namespace Utility.Database.Access
 
         public IPropertySet PropertySet { get; set; }
         
-
         public bool Connected
         {
             get

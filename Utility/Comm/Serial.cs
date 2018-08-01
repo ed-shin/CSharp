@@ -3,6 +3,9 @@ using System.IO.Ports;
 
 namespace Utility.Comm
 {
+    /// <summary>
+    /// Serial Interface 
+    /// </summary>
     public class Serial
     {
         public delegate void ReceivedDataEventDelegate(byte[] data);
@@ -29,7 +32,6 @@ namespace Utility.Comm
                 return false;
             }
         }
-
         
         public bool Open(string comport, int baudrate = 115200, int dataBit = 8, StopBits stopBits = StopBits.One, Parity parity = Parity.None)
         {

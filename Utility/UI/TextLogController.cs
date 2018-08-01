@@ -5,15 +5,25 @@ using System.Windows.Forms;
 
 namespace Utiltiy.UI
 {
+    /// <summary>
+    /// Rich Text Box Logging Controller
+    /// </summary>
     public class TextLogController
     {
         private RichTextBox _control;
+        private int _limit;
 
         public RichTextBox Control { get { return _control; } }
 
-        public TextLogController(RichTextBox control)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="control"></param>
+        /// <param name="limite">limit show log lines</param>
+        public TextLogController(RichTextBox control, int limite = 500)
         {
             _control = control;
+            _limit = limite;
         }
 
         public void SetTextWithSystem(string title, string content)
@@ -39,7 +49,7 @@ namespace Utiltiy.UI
             }
             else
             {
-                if (_control.Lines.Length > 500)
+                if (_control.Lines.Length > _limit)
                 {
                     List<string> content = _control.Lines.ToList();
                     content.RemoveAt(0);

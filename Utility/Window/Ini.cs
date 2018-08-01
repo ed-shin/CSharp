@@ -7,6 +7,9 @@ using System.Runtime.InteropServices;
 
 namespace Utility.Window
 {
+    /// <summary>
+    /// .ini File API
+    /// </summary>
     public class Ini
     {
         private static string iniPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "config.ini");

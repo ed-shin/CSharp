@@ -64,11 +64,6 @@ namespace Utility.Converter
             return result;
         }
 
-        public static string[] Split(this string str, char[] spliter)
-        {
-            return str.Split(spliter, StringSplitOptions.RemoveEmptyEntries);
-        }
-
         public static DateTime ToDate(this string str)
         {
             DateTime date = DateTime.MinValue;
@@ -77,6 +72,11 @@ namespace Utility.Converter
             return date;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="str">Format="yyyyMMddHHmmssfff</param>
+        /// <returns></returns>
         public static DateTime ToDateFromLinearString(this string str)
         {
             int offset = 0, year = 0, month = 0, day = 0, hour = 0, min = 0, sec = 0, millisec = 0;

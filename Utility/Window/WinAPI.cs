@@ -7,7 +7,10 @@ using System.Threading.Tasks;
 
 namespace Utility.Window
 {
-    public class WinAPI
+    /// <summary>
+    /// Window Animation API
+    /// </summary>
+    public partial class WinAPI
     {
         public const int Horizontal_Positive = 0x1;
         public const int Horizontal_Negative = 0x2;

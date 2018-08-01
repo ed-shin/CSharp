@@ -7,6 +7,10 @@ using System.IO;
 
 namespace Utility.Parser
 {
+    /// <summary>
+    /// Custom XML Parser 
+    /// (Not support tag's attribute)
+    /// </summary>
     public class XMLParser
     {
         private string _filename;
@@ -45,12 +49,7 @@ namespace Utility.Parser
             TagNode node = _rootNode.FindNode(name);
 
             return node;
-            //return _rootNode.GetNode(name);
         }
-
-        
-
-
 
         #region private
         private void attachNodes(string text, ref int offset, TagNode parent)
@@ -163,7 +162,7 @@ namespace Utility.Parser
         }
         #endregion
     }
-
+    
     public class TagNode
     {
         private string _name;

@@ -7,6 +7,9 @@ using System.Threading;
 
 namespace Utility.Threading
 {
+    /// <summary>
+    /// Thread Example
+    /// </summary>
     public class AsyncThread
     {
         public delegate void AsyncThreadDelegate(Queue<object> objs);
@@ -71,9 +74,9 @@ namespace Utility.Threading
                     Thread.Sleep(_duration);
                 }
             }
-            catch
+            catch(Exception e)
             {
-                ;
+                Console.WriteLine(e.Message);
             }
         }
 

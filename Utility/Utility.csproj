@@ -93,11 +93,11 @@
     <Compile Include="UI\ListController.cs" />
     <Compile Include="UI\TextLogController.cs" />
     <Compile Include="UI\TreeController.cs" />
-    <Compile Include="Window\Dialogue.cs" />
+    <Compile Include="Window\WinDialogue.cs" />
     <Compile Include="Window\ExcelUtil.cs" />
     <Compile Include="Window\Ini.cs" />
     <Compile Include="Window\PptUtil.cs" />
-    <Compile Include="Window\ProcessSupporter.cs" />
+    <Compile Include="Window\ProcessHandler.cs" />
     <Compile Include="Window\WinAPI.cs" />
   </ItemGroup>
   <ItemGroup>

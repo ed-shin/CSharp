@@ -4,12 +4,15 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 
-
 using Microsoft.Office.Core;
 using Microsoft.Office.Interop.PowerPoint;
 
 namespace Utiltiy.Window
 {
+    /// <summary>
+    /// MS Power Point Utility
+    /// (referece. com object library)
+    /// </summary>
     public class PptUtil
     {
         private Microsoft.Office.Interop.PowerPoint.Application _app;

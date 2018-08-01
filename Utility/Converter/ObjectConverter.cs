@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Utility.Converter
 {
+    /// <summary>
+    /// Object Converter, Becareful Boxing & UnBoxing
+    /// </summary>
     public static class ObjectConverter
     {
         public static Int32 ToInt32(this object obj)

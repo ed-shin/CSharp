@@ -5,9 +5,6 @@ using System.Drawing.Drawing2D;
 
 namespace DMTool.Utility
 {
-    /// <summary>
-    /// 참조. System.Drawing
-    /// </summary>
     public class GradientHeatmap
     {
         private static double _min;
@@ -66,13 +63,6 @@ namespace DMTool.Utility
 
         private static int parseLevel(double value)
         {
-            //double offset = 0;
-            //if (_min < 0)
-            //    offset = -1 * _min;
-
-            //double max = _max + offset;
-            //double min = _min + offset;
-            
             double scale = (value - _min) / (_max - _min);
             int l = (int)Math.Floor(_level * scale);
             if (l > _level)

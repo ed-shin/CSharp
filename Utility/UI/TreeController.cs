@@ -3,6 +3,9 @@ using System.Windows.Forms;
 
 namespace Utiltiy.UI
 {
+    /// <summary>
+    /// 부모 노드와 자식 노드간의 동기를 위한 트리뷰 컨트롤러
+    /// </summary>
     public class TreeController
     {
         private TreeView _tv;

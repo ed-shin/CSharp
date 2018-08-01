@@ -7,25 +7,11 @@ using System.Web.Script.Serialization;
 
 namespace Utility.Parser
 {
+    /// <summary>
+    /// Basic Json Parser (But, Newton's library is better)
+    /// </summary>
     public class JsonParser
     {
-        //**
-        //** Example
-        //**
-        //public static List<object> GetCameras(string fileName)
-        //{
-        //    string text = null;
-
-        //    using (StreamReader sr = new StreamReader(fileName))
-        //    {
-        //        text = sr.ReadToEnd();
-        //    }
-
-        //    List<object> datas = Deserializer<List<object>>(text);
-
-        //    return datas;
-        //}
-
         public static T Deserializer<T>(string json)
         {
             try
