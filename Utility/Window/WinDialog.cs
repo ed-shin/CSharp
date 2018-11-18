@@ -19,7 +19,7 @@ namespace Utility.Window
     /// <summary>
     /// Window Folder Dialogue API (better)
     /// </summary>
-    public class WinDialogue
+    public class WinDialog
     {
         private static bool isAvailable
         { 
