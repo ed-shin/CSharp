@@ -12,5 +12,10 @@ namespace Utility.Converter
         {
             return date.ToString("yyyy-MM-dd HH24:MI:SS");
         }
+
+        public static string ToJsonFormat(this DateTime date)
+        {
+            return date.ToString("yyyy-MM-ddTHH:mm:ss.fff");
+        }
     }
 }

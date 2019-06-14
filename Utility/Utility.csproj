@@ -56,6 +56,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Comm\Http\Connenction\HttpWinClient.cs" />
+    <Compile Include="Comm\Http\Connenction\HttpWinRequest.cs" />
+    <Compile Include="Comm\Http\Connenction\HttpWinResponse.cs" />
+    <Compile Include="Comm\Http\Connenction\JsonParser.cs" />
+    <Compile Include="Comm\Http\Protocol\HttpProtocol.cs" />
+    <Compile Include="Comm\Http\Protocol\Utility.cs" />
+    <Compile Include="Comm\Http\VO\LoginVO.cs" />
+    <Compile Include="Comm\Http\VO\ResponseVO.cs" />
+    <Compile Include="Database\EntityDesign\Common\Uitlity.cs" />
+    <Compile Include="Database\EntityDesign\DataModel\Context\DataModelContext.cs" />
+    <Compile Include="Database\EntityDesign\DataModel\Context\SampleDataModelContext.cs" />
+    <Compile Include="Database\EntityDesign\DataModel\Context\IDataModelContext.cs" />
+    <Compile Include="Database\EntityDesign\DataModel\Context\DataModelContextHandler.cs" />
+    <Compile Include="Database\EntityDesign\DataModel\Model\SampleModel.cs" />
+    <Compile Include="Database\EntityDesign\DataModel\Model\IDataModel.cs" />
+    <Compile Include="Database\EntityDesign\Entity\Connection\EntityConnection.cs" />
+    <Compile Include="Database\EntityDesign\Entity\Connection\EntityConnectionHandler.cs" />
+    <Compile Include="Database\EntityDesign\Entity\Connection\IConnection.cs" />
+    <Compile Include="Database\EntityDesign\Entity\Connection\IEntityConnection.cs" />
+    <Compile Include="Database\EntityDesign\Entity\Connection\ITransactionConnection.cs" />
+    <Compile Include="Database\EntityDesign\Entity\Connection\SqliteConnection.cs" />
+    <Compile Include="Database\EntityDesign\Entity\Context\EntityContext.cs" />
+    <Compile Include="Database\EntityDesign\Entity\Context\SampleEntityContext.cs" />
+    <Compile Include="Database\EntityDesign\Entity\EntityException.cs" />
+    <Compile Include="Database\EntityDesign\Entity\EntityInfo.cs" />
+    <Compile Include="Database\EntityDesign\Entity\Model\SampleEntity.cs" />
+    <Compile Include="Database\EntityDesign\Entity\Model\Interface\IEntityModel.cs" />
+    <Compile Include="Database\EntityDesign\Entity\Model\Interface\IEntityTable.cs" />
     <Compile Include="Example.cs" />
     <Compile Include="Comm\ByteBuffer.cs" />
     <Compile Include="Comm\Serial.cs" />
@@ -142,6 +170,9 @@
     <EmbeddedResource Include="UI\CustomProgressbar.resx">
       <DependentUpon>CustomProgressbar.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Database\EntityDesign\Entity\SQL\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
