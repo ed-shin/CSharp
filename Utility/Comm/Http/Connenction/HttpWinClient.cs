@@ -29,9 +29,11 @@ namespace EDEN.Utility.Comm.Http
             builder.Path = request.Path;
             builder.Query = request.QueryString;
 
-            HttpResponseMessage message = _client.GetAsync(builder.Uri).Result;
-            HttpWinResponse<T> response = new HttpWinResponse<T>(message);
-
+            HttpWinResponse<T> response = null;
+            using (HttpResponseMessage message = _client.GetAsync(builder.Uri).Result)
+            {
+                response = new HttpWinResponse<T>(message);
+            }
             return response;
         }
 
@@ -41,9 +43,11 @@ namespace EDEN.Utility.Comm.Http
             builder.Path = request.Path;
             builder.Query = request.QueryString;
 
-            HttpResponseMessage message = await _client.GetAsync(builder.Uri);
-            HttpWinResponse<T> response = await HttpWinResponse<T>.FromMessage(message);
-
+            HttpWinResponse<T> response = null;
+            using (HttpResponseMessage message = await _client.GetAsync(builder.Uri))
+            {
+                response = await HttpWinResponse<T>.FromMessage(message);
+            }
             return response;
         }
 
@@ -52,10 +56,12 @@ namespace EDEN.Utility.Comm.Http
             UriBuilder builder = new UriBuilder(this._uri);
             builder.Path = request.Path;
 
-            HttpContent content = request.GetPostContent();
-
-            HttpResponseMessage message = _client.PostAsync(builder.Uri, content).Result;
-            HttpWinResponse<T> response = new HttpWinResponse<T>(message);
+            HttpWinResponse<T> response = null;
+            using (HttpContent content = request.GetPostContent())
+            {
+                HttpResponseMessage message = _client.PostAsync(builder.Uri, content).Result;
+                response = new HttpWinResponse<T>(message);
+            }
 
             return response;
         }
@@ -65,10 +71,12 @@ namespace EDEN.Utility.Comm.Http
             UriBuilder builder = new UriBuilder(this._uri);
             builder.Path = request.Path;
 
-            HttpContent content = request.GetPostContent();
-
-            HttpResponseMessage message = await _client.PostAsync(builder.Uri, content);
-            HttpWinResponse<T> response = await HttpWinResponse<T>.FromMessage(message);
+            HttpWinResponse<T> response = null;
+            using (HttpContent content = request.GetPostContent())
+            {
+                HttpResponseMessage message = await _client.PostAsync(builder.Uri, content);
+                response = await HttpWinResponse<T>.FromMessage(message);
+            }
 
             return response;
         }
