@@ -112,6 +112,7 @@
     <Compile Include="Listener\ListenerSubject.cs" />
     <Compile Include="Parser\JsonParser.cs" />
     <Compile Include="Parser\XMLParser.cs" />
+    <Compile Include="Pattern\Singleton.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Threading\AsyncThread.cs" />
     <Compile Include="UI\ChartController.cs" />
