@@ -105,6 +105,11 @@
     <Compile Include="Drawing\GradientHeatmap.cs" />
     <Compile Include="Drawing\HeatmapColor.cs" />
     <Compile Include="Drawing\RandomColor.cs" />
+    <Compile Include="Listener\Example\SampleListener.cs" />
+    <Compile Include="Listener\Example\SampleSubject.cs" />
+    <Compile Include="Listener\IListenerContextDelegate.cs" />
+    <Compile Include="Listener\ListenerContext.cs" />
+    <Compile Include="Listener\ListenerSubject.cs" />
     <Compile Include="Parser\JsonParser.cs" />
     <Compile Include="Parser\XMLParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
