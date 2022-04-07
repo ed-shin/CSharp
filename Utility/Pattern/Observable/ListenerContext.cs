@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Utility.Pattern;
 
-namespace Utility.Listener
+namespace Utility.Observable
 {
     /// <summary>
     /// 특정 Subject와 Listener간 이벤트 연결을 지원하는 객체
@@ -48,7 +48,7 @@ namespace Utility.Listener
         /// Subject에 Listener를 바인딩합니다
         /// </summary>
         /// <exception cref="ArgumentException"></exception>
-        public static void BindListener<T>(IListenerContextDelegate<T> listener) where T : ListenerSubject
+        public static void BindListener<T>(IListenerObserver<T> listener) where T : ListenerSubject
         {
             var subject = _subjects.First(sub => sub.GetType() == typeof(T));
             if (subject != null)
@@ -60,7 +60,7 @@ namespace Utility.Listener
         /// <summary>
         /// Subject에 바인딩된 Listener를 해제합니다
         /// </summary>
-        public static void UnbindListener<T>(IListenerContextDelegate<T> listener) where T : ListenerSubject
+        public static void UnbindListener<T>(IListenerObserver<T> listener) where T : ListenerSubject
         {
             var subject = _subjects.First(sub => sub.GetType() == typeof(T));
             if (subject != null)
